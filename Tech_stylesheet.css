@@ -168,7 +168,7 @@ display: none;
       rgba(24, 12, 18, 0.8) 0%,
       rgba(192, 18, 109, 0.9) 100%
     ),
-    url(./Assets/Images/download8.jpg);
+    url(./Assets/Images/download8.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment:fixed;
@@ -550,7 +550,7 @@ display: none;
       rgba(24, 12, 18, 0.5) 100%,
       rgba(24, 12, 18, 0.5) 100%
     ),
-    url(./Assets/Images/download8.jpg);
+    url(./Assets/Images/download8.JPG);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
