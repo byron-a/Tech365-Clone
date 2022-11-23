@@ -116,16 +116,30 @@
       <span id="menu"
         ><a href="#"><i class="fa-solid fa-bars" style="color: white"></i></a
       ></span>
+      
     </nav>
-
+    <div class="mobile_view">
+      <ul>
+        <li><i class="fa-solid fa-table-cells fatab"></i> HOME</li>
+        <li><i class="fa-solid fa-table-cells fatab"></i> PROJECTS</li>
+        <li><i class="fa-solid fa-table-cells fatab"></i> TRAINING</li>
+        <li><i class="fa-solid fa-table-cells fatab"></i> CONTACT</li>
+      </ul>
+    </div>
+    <script >
+      let menu = document.getElementById("menu");
+      let mobileView = document.getElementsByClassName("mobile_view")[0];
+      menu.addEventListener("click", ()=>{mobileView.classList.toggle("appear")})
+     document.addEventListener("scroll", ()=>{
+      mobileView.classList.remove('appear')
+     })
+    </script>
     <!-- body banner -->
     <section class="bodybanner">
       <div>
         <p>We Are Digital Business Solution Agency.</p>
-        <p>
-          We Are Creating Amazing
-          <span style="color: black">Applications.</span>
-        </p>
+        <p>We Are Creating Amazing</p>
+        <p>  <span class="span" style="color: black"> </span> <i class="fa-solid fa-pen fa-2x pen"></i></p>
         <p>
           For our valuable clients across industries within and outside Nigeria.
         </p>
@@ -135,12 +149,53 @@
         <button>Our Training</button>
       </div>
     </section>
+    <script>
+      let services = ["Applications. ", "Experience.   ", "Result.       ", "Design.       "]
+      let span = document.querySelector(".span");
+      let count = 0;
+      let text;
+      let writeText = '';
+      let characterCount = 0;
 
+     
+      setInterval(()=>{
+           write();
+           changeService();
+          },150)
+      
+      function write(){
+        characterCount++
+          text = services[count];
+         //console.log(text)
+          if (characterCount > text.length){
+            count++
+            characterCount = 0;
+            writeText = text.slice(0, characterCount);
+          }else{
+            writeText = text.slice(0, characterCount);
+           // console.log(writeText)
+          }
+          return writeText;
+        }
+    
+      function changeService(){
+        //count++
+        if(count > 3){
+          count = 0;
+          span.innerHTML = writeText;
+        }else{
+          span.innerHTML = writeText;
+         // console.log(writeText);
+        }
+       
+      }
+      
+    </script>
     <!-- bodyarticle -->
     <section class="bodyarticle">
       <div class="bodyarticle__div1">
         <div class="bodyarticle__div1a">
-          <img class="img" src="./Assets/Images/responsive-website.png" />
+          <img class="img" src="./Assets/Images/responsive-website.PNG" />
         </div>
         <div class="bodyarticle__div1b">
           <div>
@@ -247,32 +302,32 @@
     <section class="sndcard">
       <div class="sndcard-container">
         <div class="sndcard-item">
-          <img src="./Assets/Images/learnfastng.png" />
+          <img src="./Assets/Images/learnfastng.PNG" />
           <p><a href="#">Learnfast-Online Course Website.</a></p>
           <p>Web Development |LMS</p>
         </div>
         <div class="sndcard-item">
-          <img src="./Assets/Images/logo-designer-in-nigeria.jpg" />
+          <img src="./Assets/Images/logo-designer-in-nigeria.JPG" />
           <p><a href="#">Learnfast-Online Course Website.</a></p>
           <p>Web Development |LMS</p>
         </div>
         <div class="sndcard-item">
-          <img src="./Assets/Images/business-process-automation-in-nig.jpg" />
+          <img src="./Assets/Images/business-process-automation-in-nig.JPG" />
           <p><a href="#">Learnfast-Online Course Website.</a></p>
           <p>Web Development |LMS</p>
         </div>
         <div class="sndcard-item">
-          <img src="./Assets/Images/joygate-hotels-and-suites.jpg" />
+          <img src="./Assets/Images/joygate-hotels-and-suites.JPG" />
           <p><a href="#">Learnfast-Online Course Website.</a></p>
           <p>Web Development |LMS</p>
         </div>
         <div class="sndcard-item">
-          <img src="./Assets/Images/download8.jpg" />
+          <img src="./Assets/Images/download8.JPG" />
           <p><a href="#">Learnfast-Online Course Website.</a></p>
           <p>Web Development |LMS</p>
         </div>
         <div class="sndcard-item">
-          <img src="./Assets/Images/sreategic-masterclass.png" />
+          <img src="./Assets/Images/sreategic-masterclass.PNG" />
           <p><a href="#">Learnfast-Online Course Website.</a></p>
           <p>Web Development |LMS</p>
         </div>
@@ -349,12 +404,12 @@
     <!-- logos -->
     <section class="logos">
       <div class="brand-logo">
-        <img src="./Assets/Images/autosmart.jpg" />
-        <img src="./Assets/Images/genesis.jpg" />
-        <img src="./Assets/Images/coronation-merchant-bank.jpg" />
-        <img src="./Assets/Images/wimbiz-logo.jpg" />
-        <img src="./Assets/Images/joygate-hotel.jpg" />
-        <img src="./Assets/Images/oando.jpg" />
+        <img src="./Assets/Images/autosmart.JPG" />
+        <img src="./Assets/Images/genesis.JPG" />
+        <img src="./Assets/Images/coronation-merchant-bank.JPG" />
+        <img src="./Assets/Images/wimbiz-logo.JPG" />
+        <img src="./Assets/Images/joygate-hotel.JPG" />
+        <img src="./Assets/Images/oando.JPG" />
       </div>
     </section>
 
@@ -433,7 +488,7 @@
     <!-- second footer -->
     <section class="footer2">
       <div>
-        <p style="font-size: large">
+        <p>
           Copyright&copy; 2021. All Rights Reserved. Created With
           <i class="fa-solid fa-heart" style="color: #f4073f"></i> By
           <span style="color: #f4073f">Tech365 Team.</span>

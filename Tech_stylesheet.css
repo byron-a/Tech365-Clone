@@ -36,6 +36,9 @@ flex-direction: column;
   .left-header, .right-header {
     margin: 1.5% 0;
   }
+  .header span {
+    font-size: 12px;
+  }
 }
 
 /* navbar ...................................................................*/
@@ -138,9 +141,36 @@ flex-direction: column;
   border-radius: 5%;
   position: absolute;
   right: 15px;
-display: none;
+  display: none;
 }
-
+.mobile_view {
+  font-family: Arial, Helvetica, sans-serif;
+  display: none;
+  position: absolute;
+  right: 0px;
+  /* position:sticky;
+  top: 60px;
+  left:100%; */
+ 
+  border-radius: 2px;
+  font-size: 10px;
+  line-height: 3;
+  padding: 20px 40px 40px;
+  width: 200px;
+  background-color:rgba(26, 29, 36, 0.938) ;
+  color: #808282;
+  
+}
+.mobile_view ul li {
+  list-style-type: none;
+}
+.fatab {
+  margin-right: 5px;
+}
+.mobile_view ul li:hover {
+  color: rgb(232, 4, 63);
+  cursor: pointer;
+}
 @media screen and (max-width:1000px) {
   #menu {
     display: block;
@@ -155,8 +185,11 @@ display: none;
 #menu:hover {
   background-color: black;
 }
-
+.appear {
+  display: block;
 }
+}
+
 
 
 
@@ -168,7 +201,7 @@ display: none;
       rgba(24, 12, 18, 0.8) 0%,
       rgba(192, 18, 109, 0.9) 100%
     ),
-    url(./Assets/Images/download8.jpg);
+    url(./Assets/Images/download8.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment:fixed;
@@ -189,6 +222,7 @@ display: none;
 .bodybanner p:nth-child(2) {
   font-size: 375%;
   font-weight: 800;
+  margin-bottom: 0;
 }
 
 .bodybanner button {
@@ -215,6 +249,14 @@ display: none;
   cursor: pointer;
 }
 
+.span {
+  font-size: 250%;
+  font-weight: 800;
+}
+
+.pen {
+  color: white;
+}
 
 @media screen and (max-width:1000px) {
   .bodybanner {
@@ -223,7 +265,10 @@ display: none;
   .bodybanner p {
     font-size: 160%;
   }
-
+  .span {
+    font-size: 200%;
+    font-weight: 800;
+   }
 .bodybanner p:nth-child(2) {
   font-size: 280%;
 }
@@ -248,11 +293,6 @@ display: none;
 .bodyarticle__div1a {
   text-align: center;
 }
-
-/* .img {
-  height: 10%;
-} */
-
 
 .bodyarticle__div1b {
   margin: 30px 0 0 0px;
@@ -302,7 +342,7 @@ display: none;
   font-weight: 900;
 }
 
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1000px) {
   .bodyarticle {
     padding: 100px 0;
     display: flex;
@@ -320,7 +360,7 @@ display: none;
 
   .img {
     margin: 0 auto;
-    width: 480px;
+    width: 350px;
   }
 
 }
@@ -349,9 +389,7 @@ display: none;
   background: rgb(15, 17, 21);
   margin: 0 auto;
   height: 300px;
-  /* width: 330px; */
-  padding: 50px;
-  font-size: medium;
+  padding: 40px 50px 50px;
 }
 
 .grid-item:nth-of-type(even) {
@@ -370,6 +408,9 @@ display: none;
   margin-bottom: 10px;
   color: white;
 }
+.grid-item p:last-of-type {
+  font-size:small ;
+}
 
 @media screen and (max-width:900px) {
   .bodycard {
@@ -385,13 +426,10 @@ display: none;
 /* Portfolio */
 
 .portfo {
-  /* width: 65.9475rem; */
-  /* margin: 100px auto 0; */
   padding: 100px 120px;
   display: flex;
   column-gap: 30%;
-  /* height: 50px; */
-}
+ }
 
 .port-left {
   display: flex;
@@ -409,7 +447,9 @@ display: none;
 }
 
 .port-left p:last-of-type {
-  font-size: 35px;
+  font-size: 30px;
+  font-weight: 500;
+  width:170px;
 }
 
 .port-right {
@@ -535,7 +575,7 @@ display: none;
     padding: 100px 30px 130px;
   }
   .para {
-    font-size: 40px;
+    font-size: 30px;
     line-height: 1.5;
   }
 }
@@ -806,10 +846,14 @@ padding: 80px 20px;
   .footer2 {
     display: block;
     padding: 0 20px;
+    
   }
 
-  .imgl, p {
+ .footer2 p, .imgl {
     margin-top: 20px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -822,7 +866,7 @@ padding: 80px 20px;
   border-radius: 20px;
   position:fixed;
   bottom: 20px;
-  left: 88%;
+  right: 2%;
   display: flex;    
   align-items: center;
   column-gap: 5px;
@@ -844,7 +888,7 @@ padding: 80px 20px;
   size: 3;
   position: fixed;
   bottom: 70px;
-  left: 97%;
+  right: 2%;
   margin-bottom: 10px;
   padding: 6px 12px 5px;
   border-radius: 100%;
@@ -863,11 +907,12 @@ padding: 80px 20px;
   .sticky-call {
     padding: 15px 17px;
     border-radius: 100%;
+    
   }
 
-  .navigator {
+  /* .navigator {
   position: fixed;
   left: 93%;
-  }
+  } */
 }
 
