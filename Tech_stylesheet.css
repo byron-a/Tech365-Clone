@@ -277,6 +277,11 @@ flex-direction: column;
   margin:0 4px;
 }
 }
+@media screen and (max-width:500px) {
+.bodybanner p {
+  font-size: 100%;
+}
+}
 
 /* bodyarticle.............................................................. */
 
