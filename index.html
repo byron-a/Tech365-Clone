@@ -150,30 +150,36 @@
       </div>
     </section>
     <script>
-      let services = ["Applications. ", "Experience.   ", "Result.       ", "Design.       "]
+      let services = ["Applications.      ", "Experience.        ", "Result.            ", "Design.            "]
       let span = document.querySelector(".span");
       let count = 0;
       let text;
       let writeText = '';
       let characterCount = 0;
+      let countMinus = 20;
 
-     
       setInterval(()=>{
            write();
            changeService();
-          },150)
+          },80)
       
       function write(){
         characterCount++
           text = services[count];
          //console.log(text)
           if (characterCount > text.length){
-            count++
-            characterCount = 0;
-            writeText = text.slice(0, characterCount);
+           
+            characterCount = text.length;
+            countMinus--
+            writeText = text.slice(0, countMinus);
+            if (countMinus == 0){
+              count++
+              countMinus = 20;
+              characterCount = 0
+            }
           }else{
             writeText = text.slice(0, characterCount);
-           // console.log(writeText)
+           
           }
           return writeText;
         }
