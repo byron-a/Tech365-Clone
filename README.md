@@ -5,4 +5,4 @@ A practice of HTML, CSS and JAVASCRIPT
 ![](./Assets/Images/tech365.png)
 
 ### Live site
-[Online view](https://byron-a.github.io/Tech365-Clone/)
+[live site](https://byron-a.github.io/Tech365-Clone/)
