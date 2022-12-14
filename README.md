@@ -2,7 +2,7 @@
 A practice of HTML, CSS and JAVASCRIPT
 -
 ![](./Assets/Images/tech.png)
-![](./Assets/Images/tech366.png)
+![](./Assets/Images/tech365.png)
 
 ### Live site
-[online](https://byron-a.github.io/Tech365-Clone/)
+[Online view](https://byron-a.github.io/Tech365-Clone/)
