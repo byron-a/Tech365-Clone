@@ -1,3 +1,7 @@
 # Tech365-Clone
-Design with HTML & CSS,
-This is an earlier version 
+A practice of HTML, CSS and JAVASCRIPT
+![](./Assets/Images/tech.png)
+![](./Assets/Images/tech366.png)
+
+### Live site
+[online](https://byron-a.github.io/Tech365-Clone/)
